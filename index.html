@@ -24,8 +24,90 @@
     <title>Password generator app</title>
   </head>
   <body>
-    Password Generator P4$5W0rD! Character Length Include Uppercase Letters
-    Include Lowercase Letters Include Numbers Include Symbols Strength Generate
+    <h1 class="title">Password Generator</h1>
+    <main class="generator">
+      <div class="generator-result">
+        <h2 class="pwd">P4$5W0rD!</h2>
+        <img
+          src="./assets/images/icon-copy.svg"
+          width="17.5"
+          height="20"
+          alt="Icon copy"
+        />
+      </div>
+      <div class="generator-body">
+        <div class="form-control">
+          <label class="label label-length" for="inputLength">
+            <span class="label-text">Character Length</span>
+            <span id="inputLengthResult" class="label-value" aria-live="polite"
+              >10</span
+            >
+          </label>
+          <input id="inputLength" class="pwd-range" type="range" />
+        </div>
+
+        <ul class="radios">
+          <div class="form-control form-control--checkbox">
+            <label>
+              <input id="checkUppercase" type="checkbox" />
+              <div class="checkBox">
+                <img src="./assets/images/icon-check.svg" alt="" />
+              </div>
+            </label>
+            <span class="checkbox-title">Include Uppercase Letters</span>
+          </div>
+
+          <div class="form-control form-control--checkbox">
+            <label>
+              <input id="checkLowercase" type="checkbox" />
+              <div class="checkBox">
+                <img src="./assets/images/icon-check.svg" alt="" />
+              </div>
+            </label>
+            <span class="checkbox-title">Include Lowercase Letters</span>
+          </div>
+
+          <div class="form-control form-control--checkbox">
+            <label>
+              <input id="checkNumbers" type="checkbox" />
+              <div class="checkBox">
+                <img src="./assets/images/icon-check.svg" alt="" />
+              </div>
+            </label>
+            <span class="checkbox-title">Include Numbers</span>
+          </div>
+
+          <div class="form-control form-control--checkbox">
+            <label>
+              <input id="checkSymbols" type="checkbox" />
+              <div class="checkBox">
+                <img src="./assets/images/icon-check.svg" alt="" />
+              </div>
+            </label>
+            <span class="checkbox-title">Include Symbols</span>
+          </div>
+        </ul>
+
+        <div class="pwd-str">
+          <span class="str-title">Strength</span>
+          <div class="str-result">
+            <span class="str-result-value">Medium</span>
+            <ul class="str-result-ticks">
+              <div class="block block--empty">1</div>
+              <div class="block block--empty">1</div>
+              <div class="block block--empty">1</div>
+              <div class="block block--empty">1</div>
+            </ul>
+          </div>
+        </div>
+
+        <button id="btnGenerate" class="btn" type="button">
+          Generate &rarr;
+        </button>
+      </div>
+    </main>
+    <!--
+       Strength Generate -->
   </body>
 </html>
 
