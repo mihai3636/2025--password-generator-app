@@ -26,6 +26,11 @@
 
 .btn-icon {
   cursor: pointer;
+  color: var(--clr-primary);
+
+  &:hover {
+    color: var(--clr-grey-1);
+  }
 }
 
 .label-length {
@@ -71,7 +76,7 @@ input[type="checkbox"] {
 
   &:checked + .checkbox {
     background-color: var(--clr-primary);
-    border: none;
+    border-color: var(--clr-primary);
   }
 }
 
@@ -85,6 +90,10 @@ input[type="checkbox"] {
   align-items: center;
 
   cursor: pointer;
+
+  &:hover {
+    border-color: var(--clr-primary);
+  }
 }
 
 .checkbox-title {
@@ -122,17 +131,33 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: var(--sp-1);
+
+  &.too-weak .block:first-child {
+    background-color: var(--clr-strength-1);
+    border-color: var(--clr-strength-1);
+  }
+
+  &.weak .block:nth-child(-n + 2) {
+    background-color: var(--clr-strength-2);
+    border-color: var(--clr-strength-2);
+  }
+
+  &.medium .block:nth-child(-n + 3) {
+    background-color: var(--clr-strength-3);
+    border-color: var(--clr-strength-3);
+  }
+
+  &.strong .block {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+  }
 }
 
 .block {
   width: 10px;
   height: 28px;
-  background-color: red;
-
-  &.block--empty {
-    background-color: transparent;
-    border: 2px solid var(--clr-grey-1);
-  }
+  background-color: transparent;
+  border: 2px solid var(--clr-grey-1);
 }
 
 .btn {
@@ -140,6 +165,12 @@ input[type="checkbox"] {
   width: 100%;
   padding: var(--sp-2);
   background-color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
 
   cursor: pointer;
+
+  &:hover {
+    color: var(--clr-primary);
+    background: transparent;
+  }
 }

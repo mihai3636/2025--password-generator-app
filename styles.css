@@ -142,6 +142,10 @@ body {
 
 .btn-icon {
   cursor: pointer;
+  color: var(--clr-primary);
+}
+.btn-icon:hover {
+  color: var(--clr-grey-1);
 }
 
 .label-length {
@@ -185,7 +189,7 @@ input[type=checkbox] {
 }
 input[type=checkbox]:checked + .checkbox {
   background-color: var(--clr-primary);
-  border: none;
+  border-color: var(--clr-primary);
 }
 
 .checkbox {
@@ -196,6 +200,9 @@ input[type=checkbox]:checked + .checkbox {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.checkbox:hover {
+  border-color: var(--clr-primary);
 }
 
 .checkbox-title {
@@ -232,13 +239,26 @@ input[type=checkbox]:checked + .checkbox {
   align-items: center;
   gap: var(--sp-1);
 }
+.str-result-ticks.too-weak .block:first-child {
+  background-color: var(--clr-strength-1);
+  border-color: var(--clr-strength-1);
+}
+.str-result-ticks.weak .block:nth-child(-n+2) {
+  background-color: var(--clr-strength-2);
+  border-color: var(--clr-strength-2);
+}
+.str-result-ticks.medium .block:nth-child(-n+3) {
+  background-color: var(--clr-strength-3);
+  border-color: var(--clr-strength-3);
+}
+.str-result-ticks.strong .block {
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
 
 .block {
   width: 10px;
   height: 28px;
-  background-color: red;
-}
-.block.block--empty {
   background-color: transparent;
   border: 2px solid var(--clr-grey-1);
 }
@@ -248,7 +268,12 @@ input[type=checkbox]:checked + .checkbox {
   width: 100%;
   padding: var(--sp-2);
   background-color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
   cursor: pointer;
+}
+.btn:hover {
+  color: var(--clr-primary);
+  background: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */
