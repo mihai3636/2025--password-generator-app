@@ -35,10 +35,36 @@
   font-size: var(--fs-2);
   line-height: var(--lh-2);
 
+  &.pwd--generated {
+    color: var(--clr-grey-1);
+  }
+
   @media (min-width: $bp-tablet) {
     font-size: var(--fs-1);
     line-height: var(--lh-1);
   }
+}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+
+  @media (min-width: $bp-tablet) {
+    gap: var(--sp-2);
+  }
+
+  &.done {
+    & > .copy-message {
+      display: block;
+    }
+  }
+}
+
+.copy-message {
+  display: none;
+  text-transform: uppercase;
+  color: var(--clr-primary);
 }
 
 .btn-icon {

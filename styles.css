@@ -165,11 +165,34 @@ body {
   font-size: var(--fs-2);
   line-height: var(--lh-2);
 }
+.pwd.pwd--generated {
+  color: var(--clr-grey-1);
+}
 @media (min-width: 48rem) {
   .pwd {
     font-size: var(--fs-1);
     line-height: var(--lh-1);
   }
+}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+@media (min-width: 48rem) {
+  .copy-container {
+    gap: var(--sp-2);
+  }
+}
+.copy-container.done > .copy-message {
+  display: block;
+}
+
+.copy-message {
+  display: none;
+  text-transform: uppercase;
+  color: var(--clr-primary);
 }
 
 .btn-icon {
