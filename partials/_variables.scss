@@ -77,3 +77,6 @@ $bp-desktop: toRem(800px);
 
   --desktop-calc-max-width: #{toRem(920px)};
 }
+
+$bp-tablet: toRem(768px);
+$bp-desktop: toRem(1440px);

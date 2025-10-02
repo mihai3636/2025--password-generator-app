@@ -3,12 +3,23 @@
 
 .generator {
   width: 100%;
+  max-width: 540px;
 }
 
 .generator-result,
 .generator-body {
   background-color: var(--clr-grey-4);
   padding: var(--sp-2);
+
+  @media (min-width: $bp-tablet) {
+    padding-inline: var(--sp-4);
+  }
+}
+
+.generator-body {
+  @media (min-width: $bp-tablet) {
+    padding: var(--sp-4);
+  }
 }
 
 .generator-result {
@@ -22,6 +33,12 @@
 .pwd {
   color: var(--clr-grey-3);
   font-size: var(--fs-2);
+  line-height: var(--lh-2);
+
+  @media (min-width: $bp-tablet) {
+    font-size: var(--fs-1);
+    line-height: var(--lh-1);
+  }
 }
 
 .btn-icon {
@@ -31,6 +48,11 @@
   &:hover {
     color: var(--clr-grey-1);
   }
+
+  @media (min-width: $bp-tablet) {
+    width: 21px;
+    height: 24px;
+  }
 }
 
 .label-length {
@@ -39,6 +61,10 @@
   align-items: center;
 
   margin-block-end: var(--fs-4);
+
+  @media (min-width: $bp-tablet) {
+    margin-block-end: var(--fs-2);
+  }
 }
 
 .label-text {
@@ -48,6 +74,11 @@
 .label-value {
   font-size: var(--fs-2);
   color: var(--clr-primary);
+
+  @media (min-width: $bp-tablet) {
+    font-size: var(--fs-1);
+    line-height: var(--lh-1);
+  }
 }
 
 .pwd-range {
@@ -79,7 +110,8 @@
 
     border: 2px solid var(--clr-grey-1);
 
-    &:hover {
+    &:hover,
+    &:active {
       border-color: var(--clr-primary);
       background: var(--clr-grey-5);
     }
@@ -98,7 +130,8 @@
 
     border: 2px solid var(--clr-grey-1);
 
-    &:hover {
+    &:hover,
+    &:active {
       border-color: var(--clr-primary);
       background: var(--clr-grey-5);
     }
@@ -109,7 +142,7 @@
   margin-block-end: var(--sp-4);
 }
 
-.radios {
+.checkboxes {
   display: flex;
   flex-direction: column;
   gap: var(--fs-4);
@@ -120,6 +153,11 @@
 .form-control--checkbox {
   display: flex;
   gap: var(--sp-2);
+  align-items: center;
+
+  @media (min-width: $bp-tablet) {
+    gap: var(--sp-3);
+  }
 }
 
 input[type="checkbox"] {
@@ -160,6 +198,10 @@ input[type="checkbox"] {
   align-items: center;
 
   margin-block-end: var(--sp-2);
+
+  @media (min-width: $bp-tablet) {
+    margin-block-end: var(--sp-4);
+  }
 }
 
 .str-title {
@@ -176,6 +218,11 @@ input[type="checkbox"] {
 .str-result-value {
   color: var(--clr-grey-1);
   text-transform: uppercase;
+  font-size: var(--fs-3);
+
+  @media (min-width: $bp-tablet) {
+    font-size: var(--fs-2);
+  }
 }
 
 .str-result-ticks {
