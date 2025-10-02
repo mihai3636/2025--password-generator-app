@@ -51,7 +51,33 @@
 }
 
 .pwd-range {
+  --range-percentage: 50%;
   width: 100%;
+  -webkit-appearence: none;
+  -moz-appearance: none;
+
+  height: var(--sp-1);
+  outline: none;
+
+  background: linear-gradient(
+    to right,
+    var(--clr-primary) var(--range-percentage),
+    var(--clr-grey-5) var(--range-percentage)
+  );
+
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
+    -webkit-appearence: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 28px;
+    height: 28px;
+    background: var(--clr-grey-1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
 .form-control--length {
