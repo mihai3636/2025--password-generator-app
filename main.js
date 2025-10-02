@@ -33,7 +33,7 @@ let isCopied = false;
 let complexityScore = 5;
 
 let outputPwdVal = "P4$5W0rD!";
-let inputLengthVal = 10;
+let inputLengthVal = 8;
 let checkUppercaseVal = false;
 let checkLowercaseVal = false;
 let checkNumbersVal = false;
@@ -82,6 +82,7 @@ checkSymbolsEl.addEventListener("change", () => {
 btnGenerateEl.addEventListener("click", (ev) => {
   isGenerated = true;
   isCopied = false;
+  generatePassword();
 
   updateOutputPwdUi();
   updateBtnIconUi();
@@ -210,4 +211,33 @@ function updateComplexityUi() {
 
   strengthListEl.classList = resultClassName;
   strengthNameEl.textContent = resultStrengthName;
+}
+
+function generatePassword() {
+  const UPPERCASE_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const LOWERCASE_CHARS = "abcdefghijklmnopqrstuvwxyz";
+  const NUMBER_CHARS = "0123456789";
+  const SYMBOL_CHARS = "!@#$%^&*()_+[]{}|;:,.<>?";
+
+  let allowedChars = `${LOWERCASE_CHARS}`;
+
+  if (checkUppercaseVal) {
+    allowedChars += UPPERCASE_CHARS;
+  }
+
+  if (checkNumbersVal) {
+    allowedChars += NUMBER_CHARS;
+  }
+
+  if (checkSymbolsVal) {
+    allowedChars += SYMBOL_CHARS;
+  }
+
+  let pwd = "";
+  for (let i = 0; i < inputLengthVal; i++) {
+    const randomIndex = Math.floor(Math.random() * allowedChars.length);
+    pwd += allowedChars[randomIndex];
+  }
+
+  outputPwdVal = pwd;
 }
