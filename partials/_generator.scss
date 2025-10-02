@@ -177,6 +177,8 @@
 }
 
 .form-control--checkbox {
+  cursor: pointer;
+
   display: flex;
   gap: var(--sp-2);
   align-items: center;
