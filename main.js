@@ -89,9 +89,11 @@ btnGenerateEl.addEventListener("click", (ev) => {
 });
 
 btnIconEl.addEventListener("click", (ev) => {
-  isCopied = true;
+  navigator.clipboard.writeText(outputPwdVal).then(() => {
+    isCopied = true;
 
-  updateBtnIconUi();
+    updateBtnIconUi();
+  });
 });
 
 function updateCheckSymbolsUi() {
