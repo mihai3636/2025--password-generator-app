@@ -169,20 +169,40 @@ body {
   width: 100%;
   -webkit-appearence: none;
   -moz-appearance: none;
+  appearance: none;
   height: var(--sp-1);
   outline: none;
   background: linear-gradient(to right, var(--clr-primary) var(--range-percentage), var(--clr-grey-5) var(--range-percentage));
 }
-.pwd-range::-webkit-slider-thumb, .pwd-range::-moz-range-thumb {
-  -webkit-appearence: none;
+.pwd-range::-moz-range-thumb {
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   background: var(--clr-grey-1);
-  border: none;
   border-radius: 50%;
   cursor: pointer;
+  border: 2px solid var(--clr-grey-1);
+}
+.pwd-range::-moz-range-thumb:hover {
+  border-color: var(--clr-primary);
+  background: var(--clr-grey-5);
+}
+.pwd-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  background: var(--clr-grey-1);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--clr-grey-1);
+}
+.pwd-range::-webkit-slider-thumb:hover {
+  border-color: var(--clr-primary);
+  background: var(--clr-grey-5);
 }
 
 .form-control--length {
