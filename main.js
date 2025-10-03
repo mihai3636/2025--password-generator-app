@@ -1,5 +1,7 @@
 console.log("Hello world!");
 
+document.addEventListener("touchstart", function () {}, false);
+
 const inputLengthEl = document.getElementById("inputLength");
 const inputLengthResultEl = document.getElementById("inputLengthResult");
 

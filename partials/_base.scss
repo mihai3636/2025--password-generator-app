@@ -1,6 +1,11 @@
 @use "utils" as *;
 @use "variables" as *;
 
+html {
+  min-height: 100svh;
+  background: linear-gradient(to right, #222, #444);
+}
+
 body {
   font-family: var(--ff-main), sans-serif;
   font-size: var(--fs-4);
