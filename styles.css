@@ -98,8 +98,8 @@ select:active {
 }
 
 html {
-  min-height: 100vh;
-  background: linear-gradient(to right, #222, #444);
+  min-height: 100svh;
+  background: linear-gradient(to right, var(--clr-grey-6), var(--clr-grey-7));
 }
 
 body {
@@ -115,8 +115,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: var(--sp-2);
-  min-height: 100vh;
+  min-height: 100svh;
   padding-inline: var(--sp-2);
+  padding-top: env(safe-area-inset-top);
 }
 @media (min-width: 48rem) {
   body {
