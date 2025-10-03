@@ -2,7 +2,7 @@
 @use "variables" as *;
 
 html {
-  min-height: 100svh;
+  min-height: 100vh;
   background: linear-gradient(to right, #222, #444);
 }
 
@@ -23,7 +23,7 @@ body {
 
   gap: var(--sp-2);
 
-  min-height: 100svh;
+  min-height: 100vh;
   padding-inline: var(--sp-2);
 
   @media (min-width: $bp-tablet) {

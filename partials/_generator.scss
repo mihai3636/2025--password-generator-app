@@ -71,9 +71,14 @@
   cursor: pointer;
   color: var(--clr-primary);
 
-  &:hover,
   &:active {
     color: var(--clr-grey-1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--clr-grey-1);
+    }
   }
 
   @media (min-width: $bp-tablet) {
@@ -137,10 +142,16 @@
 
     border: 2px solid var(--clr-grey-1);
 
-    &:hover,
     &:active {
       border-color: var(--clr-primary);
       background: var(--clr-grey-5);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border-color: var(--clr-primary);
+        background: var(--clr-grey-5);
+      }
     }
   }
 
@@ -157,10 +168,16 @@
 
     border: 2px solid var(--clr-grey-1);
 
-    &:hover,
     &:active {
       border-color: var(--clr-primary);
       background: var(--clr-grey-5);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        border-color: var(--clr-primary);
+        background: var(--clr-grey-5);
+      }
     }
   }
 }
@@ -209,9 +226,14 @@ input[type="checkbox"] {
 
   cursor: pointer;
 
-  &:hover,
   &:active {
     border-color: var(--clr-primary);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      border-color: var(--clr-primary);
+    }
   }
 }
 
