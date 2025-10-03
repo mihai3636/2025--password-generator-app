@@ -81,6 +81,8 @@ input,
 button,
 textarea,
 select {
+  -webkit-appearance: none;
+  color: inherit;
   font: inherit;
   background: none;
   border: none;
@@ -199,7 +201,7 @@ body {
   cursor: pointer;
   color: var(--clr-primary);
 }
-.btn-icon:hover {
+.btn-icon:hover, .btn-icon:active {
   color: var(--clr-grey-1);
 }
 @media (min-width: 48rem) {
@@ -317,7 +319,7 @@ input[type=checkbox]:checked + .checkbox {
   align-items: center;
   cursor: pointer;
 }
-.checkbox:hover {
+.checkbox:hover, .checkbox:active {
   border-color: var(--clr-primary);
 }
 
@@ -396,11 +398,18 @@ input[type=checkbox]:checked + .checkbox {
   padding: var(--sp-2);
   background-color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
+  color: var(--clr-grey-5);
   cursor: pointer;
 }
-.btn:hover {
+.btn:active {
   color: var(--clr-primary);
   background: transparent;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    color: var(--clr-primary);
+    background: transparent;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -71,7 +71,8 @@
   cursor: pointer;
   color: var(--clr-primary);
 
-  &:hover {
+  &:hover,
+  &:active {
     color: var(--clr-grey-1);
   }
 
@@ -208,7 +209,8 @@ input[type="checkbox"] {
 
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:active {
     border-color: var(--clr-primary);
   }
 }
@@ -292,11 +294,19 @@ input[type="checkbox"] {
   padding: var(--sp-2);
   background-color: var(--clr-primary);
   border: 2px solid var(--clr-primary);
+  color: var(--clr-grey-5);
 
   cursor: pointer;
 
-  &:hover {
+  &:active {
     color: var(--clr-primary);
     background: transparent;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--clr-primary);
+      background: transparent;
+    }
   }
 }
